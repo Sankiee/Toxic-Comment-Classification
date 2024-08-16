@@ -1431,17 +1431,6 @@ make_classification_score(y_test_d2v, predictions, "logit, custom t")
 
 We can try also different solutions. **It is up to us to decide what is better given the actual costs** of misclassification.
 
-## 13. Demo App & Further Steps
-
-With the pipeline and the trained models, is possible to **develop a demo application with a GUI**. These models can also be **embedded in existing applications**.
-
-For this purpose, i developed a demo application to play a bit with the tuned models. The application is hosted at <https://huggingface.co/spaces/EdBianchi/Social_Toximeter>.
-
-The demo consist of **three sections**, the **first one allow to write a comment and display the probabilities** assigned to each class by the classifier.
-
-<img src="../input/images/app1.png" width="550" height="350">
-
-**The second one shows the final classification label for the comment at three different thresholds**, 0.5 is the default thresh, 0.937 is the thresh selected after the tuning and 0.999 is a more extreme thresh. **This allow to understand how the output class changes based on the threshold** (and the importance of choiching a correct threshold).
 
 <img src="../input/images/app2.png" width="550" height="200">
 
@@ -1449,14 +1438,3 @@ The demo consist of **three sections**, the **first one allow to write a comment
 
 <img src="../input/images/app3.png" width="500" height="350">
 
-## 14. Drawing Conclusions - Summary
-
-We started by **cleaning the data** and performing a common **NLP pipeline**. After, we used **different embedding methods**, from a frequency based one to more advanced ones. With the resulting vectors **we performed class balancing and normalization**. At the end we **tested different baseline** models and **tuned the hyperparameters** of the best performing model. At the end we selected a context in which precision is the important metric to maximize, and **we tuned the threshold**.
-
-I am satisfied with this result of this work, and surprised about the effect of SMOTE on the performance of the model. I think that working on natural language, as well as being the basis of important everyday applications, is a stimulating and intriguing challenge: the whole society in which we live is based on language (which allows us to communicate).
-
-I tried to follow and cover **all the main steps involved in a real Data Science pipeline** applied to a NLP project and be **as precise as possible in the description** of all the passages. Although the notebook shows a linear process, **machine learning projects tend to be iterative rather than linear processes**, where previous steps are often revisited as we learn more about the problem to solve. I did lots of experiments with the encoding techniques, with normalization and class balancing in order to find this solution.
-
-I conclude keeping in my mind that "*All models are wrong, but some are useful*", i hope this can be a useful one.
-
-Bianchi Edoardo, 2022
